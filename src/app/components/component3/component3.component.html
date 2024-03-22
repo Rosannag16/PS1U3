@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <!-- Prima card -->
+    <div class="col-md-4" *ngIf="module1">
+      <div
+        class="card mb-3"
+        [ngStyle]="{
+          width: '18rem',
+          'background-color': module1.available ? 'green' : 'red'
+        }"
+      >
+        <img
+          [src]="'https://www.kimballstock.com/pix/car/p/' + module1.modelImage"
+          class="card-img-top"
+          alt="auto"
+          width="200px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ module1.brand }} {{ module1.model }}</h5>
+          <p class="card-text">
+            Anno: {{ module1.year }}<br />
+            Prezzo: {{ module1.price }}
+          </p>
+          <a href="#" class="btn btn-primary" routerLink="/{{ modules }}"
+            >Vai da qualche parte</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Seconda card -->
+    <div class="col-md-4" *ngIf="module2">
+      <div
+        class="card mb-3"
+        [ngStyle]="{
+          width: '18rem',
+          'background-color': module2.available ? 'green' : 'red'
+        }"
+      >
+        <img
+          [src]="'https://www.kimballstock.com/pix/car/p/' + module2.modelImage"
+          class="card-img-top"
+          alt="auto"
+          width="200px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ module2.brand }} {{ module2.model }}</h5>
+          <p class="card-text">
+            Anno: {{ module2.year }}<br />
+            Prezzo: {{ module2.price }}
+          </p>
+          <a href="#" class="btn btn-primary" routerLink="/{{ modules }}"
+            >Vai da qualche parte</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

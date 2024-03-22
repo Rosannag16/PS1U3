@@ -1,0 +1,14 @@
+<div class="fiat-page">
+  <h1>Fiat</h1>
+  <div class="car-list">
+    <div *ngFor="let car of fiatCars">
+      <img
+        [src]="'https://www.kimballstock.com/pix/car/p/' + car.modelImage"
+        alt="{{ car.model }}"
+      />
+      <h3>{{ car.model }}</h3>
+      <p>Anno: {{ car.year }}</p>
+      <p>Prezzo: {{ car.price }}</p>
+    </div>
+  </div>
+</div>
